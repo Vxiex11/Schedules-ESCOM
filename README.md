@@ -14,7 +14,7 @@ This is a web-based schedule management system developed as a school project. Sc
 
 ## 📽️ Project Demo
 
-[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Watch the demo](https://youtu.be/QXSKSeded_E.jpg)](https://youtu.be/QXSKSeded_E)
 
 > Click the image above to watch the video demo on YouTube.
 
