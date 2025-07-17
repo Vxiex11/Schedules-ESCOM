@@ -12,7 +12,7 @@ This is a web-based schedule management system developed as a school project. Sc
 
 ---
 
-## 📽️ Project Demo
+## 📽️ Video Project 
 
 [![Watch the demo](https://youtu.be/QXSKSeded_E.jpg)](https://youtu.be/QXSKSeded_E)
 
