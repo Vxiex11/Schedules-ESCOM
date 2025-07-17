@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="background-blur-layer"></div>
+
+    <main class="main-container">
+        <div class="login-box glass">
+            <div class="login-left">
+              <h1>Welcome!</h1>
+              <h2>Login</h2>
+            </div>
+            <div class="login-right">
+              <form id="login1">
+                <div class="user-box">
+                  <input type="text" name="username" id="name" required>
+                  <label >Username</label>
+                  <div class="invalid-feedback">Enter a valid Username, please.</div>
+                </div>
+                <div class="user-box">
+                  <input type="password" autocomplete="new-password" name="password" id="password" required> 
+                  <label >Password</label>
+                  <div class="invalid-feedback">Enter a password, please.</div>
+                </div>
+                <div class="button-container">
+                  <button type="submit" class="btn btn-lg btn-outline-success button-margin">Submit</button>
+                </div>
+              </form>
+              <div class="text-center mt-3">
+                <button type="button" class="btn btn-secondary" style="margin-top: 50px; margin-right: 40px;" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  ¿Dont have account? Register
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="mt-4 text-center">
+          <a href="index.html" type="button" class="btn btn-primary btn-lg">🏠 Back to home</a>
+        </div>
+    </main>
+
+    <!-- Modal de Registro -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="registerForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Registro de Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="regName" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="regName" required>
+          </div>
+          <div class="mb-3">
+            <label for="regUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" id="regUsername" required>
+          </div>
+          <div class="mb-3">
+            <label for="regPassword" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="regPassword" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Registrar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+  <script src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

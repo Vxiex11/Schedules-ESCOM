@@ -1,0 +1,614 @@
+/* Estilos base */
+body {
+    font-family: "Geist", sans-serif;
+    background-color: rgba(28, 28, 36, 0.965);
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content_professors,
+.content_users,
+.content_subjects,
+.content_timetables,
+.content_classrooms {
+    flex: 1;
+    padding: 3rem;
+    margin-left: 60px; /* Ajustar según el ancho de tu sidebar */
+}
+
+/* Header */
+.header-section {
+    margin-bottom: 2rem;
+}
+
+.header-section h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.search-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-box,
+.search-box2 {
+    display: flex;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #444;
+    border-radius: 4px 0 0 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: whitesmoke;
+}
+
+.search-box2 input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #444;
+    border-radius: 4px 0 0 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: whitesmoke;
+    margin-left: 15px;
+}
+
+.search-btn {
+    padding: 0 1rem;
+    background-color: #0099E6;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.searchTypes{
+    text-align: center;
+    border: 1.5px solid #444;
+    border-radius: 4px 0 0 4px;
+    background-color: #0099E6;
+    color: whitesmoke;
+}
+
+.search-box2 select option{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.add-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #0099E6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 1000;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #007bb5;
+}
+
+/* Tabla */
+.professors-table-container, .users-table-container,
+.subjects-table-container, .timetable-table-container,
+.classrooms-table-container {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.professors-table, .users-table,
+.subjects-table, .timetables-table,
+.classrooms-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.professors-table th, 
+.professors-table td,
+.users-table th,
+.users-table td,
+.subjects-table th,
+.subjects-table td,
+.timetables-table th,
+.timetables-table td,
+.classrooms-table th,
+.classrooms-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.professors-table th,
+.users-table th,
+.subjects-table th,
+.timetables-table th,
+.classrooms-table th {
+    background-color: rgba(0, 153, 230, 0.2);
+    font-weight: 500;
+}
+
+.professors-table tr:hover,
+.users-table tr:hover,
+.subjects-table tr:hover,
+.timetables-table:hover,
+.classrooms-table:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Estados */
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.active {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.status.inactive {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+/* Botones de acción */
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.edit-btn:hover {
+    color: #0099E6;
+    background-color: rgba(0, 153, 230, 0.1);
+}
+
+.delete-btn:hover {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.page-btn {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-btn:hover {
+    background-color: rgba(0, 153, 230, 0.2);
+}
+
+.page-number {
+    font-weight: 500;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+    padding: 10px;
+}
+
+.modal-content {
+    position: relative;
+    margin: 0 auto;
+    top: 5%;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(28, 28, 36, 1);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        top: 50%;
+        transform: translateY(-50%); /* Centrado vertical exacto */
+        width: 80%;
+    }
+}
+
+.close-modal {
+    float: right;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 95%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.form-group select[multiple] {
+    height: auto;
+    min-height: 100px;
+}
+
+/* Estilos para los botones de estado */
+/* Contenedor principal */
+.status-toggle {
+  
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Ocultar los radios nativos */
+.status-toggle input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo de las etiquetas */
+.status-toggle label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Texto dentro de las etiquetas */
+.status-toggle label p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Estado activo */
+.status-toggle input[type="radio"]:checked  {
+  color: white;
+  font-weight: 500;
+}
+
+/* Fondo para Active */
+.status-toggle input.active:checked  {
+  background-color: #28a745;
+}
+
+/* Fondo para Inactive */
+.status-toggle input.inactive:checked  {
+  background-color: #dc3545;
+}
+
+/* Borde entre opciones */
+.status-toggle label:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Efecto hover */
+.status-toggle label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cancel-btn, .save-btn {
+    padding: 0.95rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+    border: 1px solid #dc3545;
+}
+
+.cancel-btn:hover{
+    color: black;
+    font-weight: 750;
+}
+
+.save-btn {
+    background-color: #0099E6;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #02a7f3;
+    font-weight: 750;
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    
+    .search-add {
+        flex-direction: column;
+    }
+    
+    .search-box {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .professors-table th, 
+    .professors-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .modal-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+}
+
+/* Eliminar flechas en Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estilo general para inputs number */
+.input-office {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: "Geist", sans-serif;
+}
+
+/* SUBJECTS */
+/* Cambiar fondo y bordes */
+.select2-container--default .select2-selection--multiple {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    min-height: 40px;
+    align-content: center;
+    padding: 6px 8px;
+}
+
+/* Cambiar los tags seleccionados */
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 3px 10px 3px 6px;
+    margin-right: 4px;
+    margin-top: 4px;
+    border-radius: 4px;
+    font-size: 15px;
+    min-width: 15%;
+}
+
+@media (min-width: 240px) {
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 3px 10px 3px 6px;
+        margin-right: 4px;
+        margin-top: 4px;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+}
+
+/* ICON CLOSE */
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: white;
+    font-weight: 2;
+    cursor: pointer;
+    margin-left: 80%;
+    margin-top: 3px;
+    width: 32%;
+}
+
+/* Cambiar el color del texto dentro del input */
+.select2-container--default .select2-search--inline .select2-search__field {
+    color: whitesmoke;
+}
+
+/* Cambiar color al pasar el mouse por opciones */
+.select2-results__option--highlighted {
+    background-color: #007bff !important;
+    color: whitesmoke !important;
+}
+
+.select2-results__option{
+    background-color: gray !important;
+}
+
+/* ERRORES */
+.error-msg {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+/* INPUT */
+
+input:invalid, select:invalid {
+    border-color: #dc3545;
+}
+
+input:valid, select:valid {
+    border-color: #007bff;
+}
+
+/* ROL CSS */
+.form-group{
+    select {
+        background-color: #2c2c3a;
+        color: white;
+        border: 1px solid #444;
+        padding: 8px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    /* Estilo para las opciones */
+    select option {
+        background-color: #2c2c3a;
+        color: white;
+    }
+
+    /* Estilo para la opción seleccionada */
+    select option:checked {
+        background-color: #0099E6;
+        color: white;
+    }
+
+    /* Estilo al hacer hover */
+    select option:hover {
+        background-color: #3c3c4a;
+        cursor: pointer;
+    }
+}
+
+/* Modal to eliminate one user*/
+
+.modalPasswords{
+    display: none; 
+    position:fixed; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background-color:rgba(0,0,0,0.5); 
+    justify-content:center; 
+    align-items:center; z-index:9999;
+}
+
+.modalPasswords2{
+    background: black; padding:20px; border-radius:10px; text-align:center;
+}
+
+.inputPasswordModal{
+    width: 95%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+        border-top-color: rgb(68, 68, 68);
+        border-right-color: rgb(68, 68, 68);
+        border-bottom-color: rgb(68, 68, 68);
+        border-left-color: rgb(68, 68, 68);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+/* BUTTON */
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: whitesmoke;
+    background-color: gray;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field{
+    background-color: #007bff;
+}
+
+.select2-search--dropdown{
+    background-color: gray;
+}
