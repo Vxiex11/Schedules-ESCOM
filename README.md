@@ -1,0 +1,1 @@
+School project where I made a school page with a different perspective, providing information about the school, careers and so on. Also a login with several cruds, for teachers, subjects, groups, schedules, to be able to have an organization of where to find each teacher where there is also a section for students and to be able to create a user to log in.
