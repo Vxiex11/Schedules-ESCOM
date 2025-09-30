@@ -1,14 +1,14 @@
-# Schedules ESCOM 🏫 Resendiz :)
+# Schedules ESCOM 
 
 This is a web-based schedule management system developed as a school project. School project where I made a school page with a different perspective, providing information about the school, careers and so on. Also a login with several cruds, for teachers, subjects, groups, schedules, to be able to have an organization of where to find each teacher where there is also a section for students and to be able to create a user to log in. It allows you to manage:
 
-- Professors 👨‍🏫
-- Subjects 📚
-- Groups 👥
-- Classrooms 🏫
-- Class schedules 📅
-- Office hours ⏰
-- User accounts (admin and student) 🔐
+- Professors 
+- Subjects 
+- Groups 
+- Classrooms 
+- Class schedules 
+- Office hours 
+- User accounts (admin and student) 
 
 ---
 
@@ -26,7 +26,7 @@ Second Video is about the CRUDS.
 
 ---
 
-## 📋 Instructions
+## Instructions
 
 ### 1. Clone the repository
 
