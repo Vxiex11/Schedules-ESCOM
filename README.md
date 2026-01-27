@@ -12,7 +12,7 @@ This is a web-based schedule management system developed as a school project. Sc
 
 ---
 
-## 📽️ Video Project 
+## Video Project 
 
 First Video is about Web Site to School and you can see information.
 
@@ -62,14 +62,14 @@ Visit:
 
 http://localhost/Schedules-ESCOM
 
-⚙️ Technologies Used
+## Technologies Used
 
 - Frontend: HTML, CSS, Bootstrap (optional)
 - Backend: PHP
 - Database: MySQL
 - Data Generation: Python (Faker, bcrypt)
 
-👨‍💻 Author
+## Author
 Diego Emiliano Reséndiz Ríos
 GitHub Profile
 
